@@ -10,7 +10,8 @@ import styled from 'styled-components';
 import { injectIntl } from 'react-intl';
 import { fonts } from '@themes';
 import T from '@components/T';
-//import logo from '@images/icon-512x512.png';
+import * as colors from '@app/themes/colors';
+
 const StyledHeader = styled(Layout.Header)`
   && {
     &.ant-layout-header {
@@ -19,7 +20,7 @@ const StyledHeader = styled(Layout.Header)`
     }
     display: flex;
     justify-content: center;
-    background-color: #FAFAFA;
+    background-color: ${colors.primary};
   }
 `;
 const Logo = styled.img`
@@ -40,7 +41,7 @@ function Header(props) {
   return (
     <StyledHeader {...props} data-testid="header">
       <Logo alt="logo" src="https://img.icons8.com/ios-filled/50/000000/itunes--v2.png" />
-      <Title type="heading" id="iTunes Scraper" />
+      <Title type="heading" id="itunes_scraper" />
     </StyledHeader>
   );
 }

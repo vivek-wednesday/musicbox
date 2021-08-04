@@ -21,11 +21,11 @@ describe('<MusicContainer /> tests', () => {
     );
     expect(firstChild).toMatchSnapshot();
   });
-  it('shoudl render container', () => {
+  it('should render container', () => {
     const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
     expect(getByTestId('music-container')).toBeTruthy;
   })
-  it('shoudl render search bar', () => {
+  it('should render search bar', () => {
     const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
     expect(getByTestId('search-bar')).toBeTruthy;
   })

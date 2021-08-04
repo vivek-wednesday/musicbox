@@ -5,16 +5,15 @@
  */
 
 import React, { memo } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Input } from 'antd';
 import { connect } from 'react-redux'
-import { injectIntl /* FormattedMessage as T */ } from 'react-intl'
+import { injectIntl } from 'react-intl'
 
 import { createStructuredSelector } from 'reselect'
 import { compose } from 'redux'
 import { injectSaga } from 'redux-injectors'
 import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors'
-//import saga from './saga'
 import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
 import { musicContainerCreators } from './reducer';
@@ -35,15 +34,15 @@ const StyledSearch = styled(Search)`
 
 
 export function MusicContainer({ dispatchGetMusic,
-  dispatchClearGetMusic }) {
+  dispatchClearGetMusic, intl, musicData = {},
+  musicError = null,
+  musicName }) {
   //useInjectSaga({ key: 'musicContainer', saga })
   const handleOnChange = songName => {
     if (!isEmpty(songName)) {
-      //dispatchGetMusic(songName)
-      console.log(songName)
+      dispatchGetMusic(songName)
     } else {
-      //dispatchClearGetMusic()
-      console.log("empty")
+      dispatchClearGetMusic()
     }
   }
 
@@ -51,7 +50,7 @@ export function MusicContainer({ dispatchGetMusic,
 
   return (
     <Container data-testid="music-container">
-      <StyledSearch data-testid="search-bar" placeholder="Search for your fav song"
+      <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ id: 'search_placeholder' })}
         size="large" enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)} />
     </Container>
@@ -59,6 +58,15 @@ export function MusicContainer({ dispatchGetMusic,
 }
 
 MusicContainer.propTypes = {
+  dispatchGetMusic: PropTypes.func,
+  dispatchClearGetMusic: PropTypes.func,
+  intl: PropTypes.object,
+  musicData: PropTypes.shape({
+    resultCount: PropTypes.number,
+    results: PropTypes.array
+  }),
+  musicError: PropTypes.object,
+  musicName: PropTypes.string,
 }
 
 const mapStateToProps = createStructuredSelector({

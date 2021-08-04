@@ -4,9 +4,11 @@
  *
  */
 
+import { translate } from '@app/components/IntlGlobalProvider/index'
 import produce from 'immer'
 import get from 'lodash/get'
 import { createActions } from 'reduxsauce'
+
 
 export const initialState = { musicName: null, musicData: [], musicError: null }
 
@@ -28,7 +30,7 @@ export const musicContainerReducer = (state = initialState, action) =>
         draft.musicData = action.data;
         break;
       case musicContainerTypes.FAILURE_GET_MUSIC:
-        draft.musicError = get(action.error, 'message', 'something_went_wrong');
+        draft.musicError = get(action.error, 'message', translate('something_went_wrong'));
         break;
       case musicContainerTypes.CLEAR_GET_MUSIC:
         return initialState;

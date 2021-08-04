@@ -7,7 +7,6 @@ import { connectRouter } from 'connected-react-router';
 
 import history from 'utils/history';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
-import homeContainerReducer from 'containers/HomeContainer/reducer';
 import musicContainerReducer from 'containers/MusicContainer/reducer';
 
 /**
@@ -18,7 +17,6 @@ export default function createReducer(injectedReducer = {}) {
     ...injectedReducer,
     language: languageProviderReducer,
     router: connectRouter(history),
-    homeContainer: homeContainerReducer,
     musicContainer: musicContainerReducer
   });
 
