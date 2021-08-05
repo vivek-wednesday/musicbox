@@ -163,6 +163,7 @@ module.exports = options => ({
       '@components': path.resolve(__dirname, '../../app/components'),
       '@containers': path.resolve(__dirname, '../../app/containers'),
       '@utils': path.resolve(__dirname, '../../app/utils'),
+      '@translations': path.resolve(__dirname, '../../app/translations'),
       '@services': path.resolve(__dirname, '../../app/services'),
       '@themes': path.resolve(__dirname, '../../app/themes'),
       '@images': path.resolve(__dirname, '../../app/images'),

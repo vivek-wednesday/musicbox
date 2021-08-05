@@ -7,6 +7,7 @@
       "@app/*": ["./*"],
       "@components/*": ["./components/*"],
       "@containers/*": ["./containers/*"],
+      "@translations/*": ["./translations/*"],
       "@utils/*": ["./utils/*"],
       "@services/*": ["./services/*"]
     }

@@ -19,25 +19,25 @@ import { debounce, isEmpty } from 'lodash';
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
 
+
 const { Search } = Input;
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 `
-
 const StyledSearch = styled(Search)`
   max-width: 30rem;
   margin: 2rem;
 `;
 
-
-
 export function MusicContainer({ dispatchGetMusic,
   dispatchClearGetMusic, intl, musicData = {},
   musicError = null,
   musicName }) {
-  //useInjectSaga({ key: 'musicContainer', saga })
+
   const handleOnChange = songName => {
     if (!isEmpty(songName)) {
       dispatchGetMusic(songName)
@@ -50,7 +50,7 @@ export function MusicContainer({ dispatchGetMusic,
 
   return (
     <Container data-testid="music-container">
-      <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ id: 'search_placeholder' })}
+      <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ "id": 'search_placeholder' })}
         size="large" enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)} />
     </Container>
@@ -65,7 +65,7 @@ MusicContainer.propTypes = {
     resultCount: PropTypes.number,
     results: PropTypes.array
   }),
-  musicError: PropTypes.object,
+  musicError: PropTypes.string,
   musicName: PropTypes.string,
 }
 

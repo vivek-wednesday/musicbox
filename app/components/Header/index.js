@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { injectIntl } from 'react-intl';
 import { fonts } from '@themes';
 import T from '@components/T';
-import * as colors from '@app/themes/colors';
+import colors from '@app/themes/colors';
 
 const StyledHeader = styled(Layout.Header)`
   && {

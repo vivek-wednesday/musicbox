@@ -22,7 +22,7 @@ describe('MusicContainer reducer tests', () => {
         },
         cache
       );
-      return intl
+      return intl;
     })
   })
 
