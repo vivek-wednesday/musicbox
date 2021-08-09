@@ -50,6 +50,7 @@ exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
   </span>
   <div
     class="ant-row ant-row-center"
+    data-testid="grid"
     style="margin: -12px -20px -12px -20px;"
   >
     <p
