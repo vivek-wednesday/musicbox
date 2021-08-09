@@ -1,9 +1,9 @@
 // import produce from 'immer'
 
-import { musicContainerReducer, musicContainerTypes, initialState } from '../reducer';
 import { createIntl, createIntlCache } from 'react-intl'
 import { setIntl, translate } from "@components/IntlGlobalProvider/index"
-import translationMessages from "../../../translations/en.json"
+import translationMessages from "@translations/en.json"
+import { musicContainerReducer, musicContainerTypes, initialState } from '../reducer';
 
 /* eslint-disable default-case, no-param-reassign */
 describe('MusicContainer reducer tests', () => {

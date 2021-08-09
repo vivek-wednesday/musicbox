@@ -7,8 +7,8 @@
 
 import React from 'react';
 import { render } from '@testing-library/react'
-import { MusicContainerTest as MusicContainer } from '../index';
 import { IntlProvider } from 'react-intl';
+import { MusicContainerTest as MusicContainer } from '../index';
 
 describe('<MusicContainer /> tests', () => {
   it('should render and match the snapshot', () => {

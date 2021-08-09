@@ -52,9 +52,12 @@ exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
     class="ant-row ant-row-center"
     style="margin: -12px -20px -12px -20px;"
   >
-    <div>
-      Nothing here
-    </div>
+    <p
+      class="T__StyledText-gjlic1-0 kYcyRq"
+      data-testid="no-music-data"
+    >
+      no_results
+    </p>
   </div>
 </div>
 `;

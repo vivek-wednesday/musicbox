@@ -4,10 +4,10 @@
 
 /* eslint-disable redux-saga/yield-effects */
 import { takeLatest, call, put } from 'redux-saga/effects';
-import musicContainerSaga, { getSongList } from '../saga';
-import { musicContainerTypes } from '../reducer';
 import { getSong } from '@app/services/repoApi';
 import { apiResponseGenerator } from '@app/utils/testUtils';
+import { musicContainerTypes } from '../reducer';
+import musicContainerSaga, { getSongList } from '../saga';
 
 
 describe('MusicContainer saga tests', () => {

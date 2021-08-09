@@ -6,19 +6,18 @@
 
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { Input , Row } from 'antd';
+import { Input, Row } from 'antd';
 import { connect } from 'react-redux'
 import { injectIntl } from 'react-intl'
-
 import { createStructuredSelector } from 'reselect'
 import { compose } from 'redux'
 import { injectSaga } from 'redux-injectors'
-import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors'
 import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
+import StyledCard from '@app/components/StyledCard/index';
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
-import StyledCard from '@app/components/StyledCard/index';
+import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors'
 
 
 const { Search } = Input;

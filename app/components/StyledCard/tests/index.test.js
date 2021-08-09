@@ -4,24 +4,30 @@
  *
  */
 
-/* import React from 'react';
+import React from 'react';
 // import { fireEvent } from '@testing-library/dom'
 import { renderWithIntl } from '@utils/testUtils';
-import StyledCard from '../index'; */
+import StyledCard from '../index';
+import { data } from './testData';
+
+const sampleData = {
+  results: data
+}
 
 describe('<StyledCard />', () => {
-  it('should render and match the snapshot', () => {
-    // dummy test
-    expect(1 + 1).toBe(2);
-  });
 
-  /* it('should render and match the snapshot', () => {
+  it('should render and match the snapshot', () => {
     const { baseElement } = renderWithIntl(<StyledCard />);
     expect(baseElement).toMatchSnapshot();
   });
 
-  it('should contain 1 StyledCard component', () => {
+  it('should show error if music data is not defined', () => {
     const { getAllByTestId } = renderWithIntl(<StyledCard />);
-    expect(getAllByTestId('styled-card').length).toBe(1);
-  }); */
+    expect(getAllByTestId('no-music-data')).toBeTruthy;
+  });
+
+  it('should render cards with music data', () => {
+    const { getAllByTestId } = renderWithIntl(<StyledCard musicData={sampleData} />);
+    expect(getAllByTestId('card-wrapper')).toBeTruthy;
+  });
 });
