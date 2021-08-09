@@ -29,6 +29,10 @@ describe('<MusicContainer /> tests', () => {
     const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
     expect(getByTestId('search-bar')).toBeTruthy;
   })
+  it('should render grid', () => {
+    const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
+    expect(getByTestId('grid')).toBeTruthy;
+  })
 })
 
 

@@ -16,12 +16,23 @@ import { isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
 import { T } from '@components/T';
 import { colors } from '@themes/index';
+import styled from 'styled-components';
 
 // Function to improve image resolution as well as deal with undefined data.
 function getImage(str) {
   var escapedFind = '100x100'.replace(/([.*+?^=!:${}()|\]\\])/g, '\\$1');
   return str.replace(new RegExp(escapedFind, 'g'), '300x300');
 }
+
+const StyledSmall = styled.small`
+    font-size: 14px;
+    color: gray;
+    font-weight: normal;
+    &:hover {
+      font-size: 16px;
+      color: coralred;
+    }
+  `;
 
 function StyledCard(props) {
   const { musicData } = props;
@@ -69,6 +80,22 @@ function StyledCard(props) {
     }
   }
 
+  const imgStyle = {
+    borderBottomLeftRadius: 35, 
+    borderBottomRightRadius: 35, 
+    padding: 10 
+  }
+
+  const primaryStyle = {
+    fontSize: 40,
+    color: colors.primaryBtn
+  }
+
+  const secondaryStyle = { 
+    fontSize: 35,
+    color: colors.secondaryBtn 
+  }
+
   return musicData === undefined ? (
     <T data-testid="no-music-data" id="no_results" />
   ) : isEmpty(musicData.results) ? (
@@ -77,7 +104,7 @@ function StyledCard(props) {
     musicData.results.slice(0, 10).map((item, index) => {
       const data = musicData.results[index];
       return (
-        <Col key={index} >
+        <Col key={index}>
           <Card
             data-testid="card-wrapper"
             key={data.trackId}
@@ -87,13 +114,13 @@ function StyledCard(props) {
               <img
                 alt="example"
                 src={getImage(data.artworkUrl100)}
-                style={{ borderBottomLeftRadius: 35, borderBottomRightRadius: 35, padding: 10 }}
+                style={imgStyle}
               />
             }
             actions={[
               <BackwardOutlined
                 key="backward"
-                style={{ fontSize: 35, color: colors.secondaryBtn }}
+                style={secondaryStyle}
                 onClick={() => {
                   controlAudio(index, 'backward');
                 }}
@@ -103,18 +130,18 @@ function StyledCard(props) {
                   currentSong === index ? (
                     <PauseCircleOutlined
                       key="play"
-                      style={{ fontSize: 40, color: colors.primaryBtn }}
+                      style={primaryStyle}
                       onClick={() => {
                         controlAudio(index, 'pause');
                       }}
                     />
                   ) : (
-                    <PlayCircleOutlined key="play" style={{ fontSize: 40, color: colors.secondaryBtn }} />
+                    <PlayCircleOutlined key="play" style={{fontSize: 40}} />
                   )
                 ) : (
                   <PlayCircleOutlined
                     key="play"
-                    style={{ fontSize: 40, color: colors.primaryBtn }}
+                    style={primaryStyle}
                     onClick={() => {
                       controlAudio(index, 'play');
                     }}
@@ -123,7 +150,7 @@ function StyledCard(props) {
               </>,
               <ForwardOutlined
                 key="forward"
-                style={{ fontSize: 35, color: colors.secondaryBtn }}
+                style={secondaryStyle}
                 onClick={() => {
                   controlAudio(index, 'forward');
                 }}
@@ -134,7 +161,10 @@ function StyledCard(props) {
               avatar={<CustomerServiceOutlined style={{ fontSize: 20 }} spin={currentSong === index ? true : false} />}
               title={data.trackCensoredName}
             />
-            <Meta title={data.artistName} description={showProgressBar(index)} />
+            <Meta
+              title={<StyledSmall>{data.artistName}</StyledSmall>}
+              description={showProgressBar(index)}
+            />
             <audio ref={ele => audioList.current[index] = ele} src={data.previewUrl} preload="none" loop />
           </Card>
         </Col>

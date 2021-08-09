@@ -56,7 +56,7 @@ export function MusicContainer({
       <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ "id": 'search_placeholder' })}
         size="large" enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)} />
-      <Row gutter={[40, 24]} justify="center">
+      <Row data-testid="grid" gutter={[40, 24]} justify="center">
         <StyledCard musicData={musicData} />
       </Row>
     </Container>
