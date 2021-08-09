@@ -1,4 +1,4 @@
-import { getSong } from '@app/services/repoApi';
+import { getSong } from '@app/services/musicApi';
 import { put, call, takeLatest } from 'redux-saga/effects';
 import { musicContainerCreators, musicContainerTypes } from './reducer'
 // Individual exports for testing

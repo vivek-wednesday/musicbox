@@ -4,7 +4,7 @@
 
 /* eslint-disable redux-saga/yield-effects */
 import { takeLatest, call, put } from 'redux-saga/effects';
-import { getSong } from '@app/services/repoApi';
+import { getSong } from '@app/services/musicApi';
 import { apiResponseGenerator } from '@app/utils/testUtils';
 import { musicContainerTypes } from '../reducer';
 import musicContainerSaga, { getSongList } from '../saga';
