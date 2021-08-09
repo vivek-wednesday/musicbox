@@ -17,19 +17,19 @@ export const selectMusicContainer = () =>
 export const selectMusicData = () =>
   createSelector(
     selectMusicContainerDomain,
-    substate => get(substate, 'musicData', undefined)
+    substate => get(substate, 'musicData')
   );
 
 export const selectMusicError = () =>
   createSelector(
     selectMusicContainerDomain,
-    substate => get(substate, 'musicError', undefined)
+    substate => get(substate, 'musicError')
   );
 
 export const selectMusicName = () =>
   createSelector(
     selectMusicContainerDomain,
-    substate => get(substate, 'musicName', undefined)
+    substate => get(substate, 'musicName')
   );
 
 export default selectMusicContainer;
