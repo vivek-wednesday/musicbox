@@ -4,21 +4,20 @@
  *
  */
 
-import React, { memo } from 'react'
-import PropTypes from 'prop-types'
+import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import { Input } from 'antd';
-import { connect } from 'react-redux'
-import { injectIntl } from 'react-intl'
-
-import { createStructuredSelector } from 'reselect'
-import { compose } from 'redux'
-import { injectSaga } from 'redux-injectors'
-import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors'
+import { connect } from 'react-redux';
+import { injectIntl } from 'react-intl';
+import { createStructuredSelector } from 'reselect';
+import { compose } from 'redux';
+import { injectSaga } from 'redux-injectors';
 import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
+
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
-
+import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors';
 
 const { Search } = Input;
 
@@ -27,34 +26,41 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 const StyledSearch = styled(Search)`
   max-width: 30rem;
   margin: 2rem;
 `;
 
-export function MusicContainer({ dispatchGetMusic,
-  dispatchClearGetMusic, intl, musicData = {},
+export function MusicContainer({
+  dispatchGetMusic,
+  dispatchClearGetMusic,
+  intl,
+  musicData = {},
   musicError = null,
-  musicName }) {
-
+  musicName
+}) {
   const handleOnChange = songName => {
     if (!isEmpty(songName)) {
-      dispatchGetMusic(songName)
+      dispatchGetMusic(songName);
     } else {
-      dispatchClearGetMusic()
+      dispatchClearGetMusic();
     }
   }
 
-  const debounceHandleOnChange = debounce(handleOnChange, 400)
+  const debounceHandleOnChange = debounce(handleOnChange, 400);
 
   return (
     <Container data-testid="music-container">
-      <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ "id": 'search_placeholder' })}
-        size="large" enterButton
-        onChange={evt => debounceHandleOnChange(evt.target.value)} />
+      <StyledSearch
+        data-testid="search-bar"
+        placeholder={intl.formatMessage({ id: 'search_placeholder' })}
+        size="large"
+        enterButton
+        onChange={evt => debounceHandleOnChange(evt.target.value)}
+      />
     </Container>
-  )
+  );
 }
 
 MusicContainer.propTypes = {
@@ -66,15 +72,15 @@ MusicContainer.propTypes = {
     results: PropTypes.array
   }),
   musicError: PropTypes.string,
-  musicName: PropTypes.string,
-}
+  musicName: PropTypes.string
+};
 
 const mapStateToProps = createStructuredSelector({
   musicContainer: selectMusicContainer(),
   musicData: selectMusicData(),
   musicError: selectMusicError(),
   musicName: selectMusicName()
-})
+});
 
 function mapDispatchToProps(dispatch) {
   const { requestGetMusic, clearGetMusic } = musicContainerCreators;
@@ -84,13 +90,13 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps)
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 export default compose(
   injectIntl,
   withConnect,
   memo,
   injectSaga({ key: 'musicContainer', saga: musicContainerSaga })
-)(MusicContainer)
+)(MusicContainer);
 
-export const MusicContainerTest = compose(injectIntl)(MusicContainer)
+export const MusicContainerTest = compose(injectIntl)(MusicContainer);

@@ -2,7 +2,7 @@
 
 exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
 <div
-  class="MusicContainer__Container-sc-1d1diwg-0 egfvkc"
+  class="MusicContainer__Container-sc-1d1diwg-0 bgiqPk"
   data-testid="music-container"
 >
   <span
@@ -14,7 +14,7 @@ exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
       <input
         class="ant-input ant-input-lg"
         data-testid="search-bar"
-        placeholder="Search for your fav song"
+        placeholder="search_placeholder"
         type="text"
         value=""
       />
