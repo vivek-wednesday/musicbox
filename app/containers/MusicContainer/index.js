@@ -14,7 +14,6 @@ import { compose } from 'redux';
 import { injectSaga } from 'redux-injectors';
 import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
-
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
 import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors';

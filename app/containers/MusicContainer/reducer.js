@@ -7,7 +7,6 @@
 import produce from 'immer'
 import get from 'lodash/get'
 import { createActions } from 'reduxsauce'
-
 import { translate } from '@app/components/IntlGlobalProvider'
 
 
