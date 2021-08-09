@@ -13,17 +13,15 @@ describe('MusicContainer reducer tests', () => {
   });
 
   beforeAll(() => {
-    setIntl(() => {
-      const cache = createIntlCache();
-      const intl = createIntl(
-        {
-          locale: 'en',
-          messages: translationMessages
-        },
-        cache
-      );
-      return intl;
-    })
+    const cache = createIntlCache();
+    const intl = createIntl(
+      {
+        locale: 'en',
+        messages: translationMessages
+      },
+      cache
+    );
+    setIntl(intl)
   })
 
   it('should return the initial state', () => {

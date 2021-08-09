@@ -6,7 +6,7 @@ import { useIntl } from 'react-intl';
 let intl;
 
 export const setIntl = i => {
-  intl = i();
+  intl = i;
 }
 
 export function IntlGlobalProvider({ children }) {

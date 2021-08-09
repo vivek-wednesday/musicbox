@@ -115,6 +115,7 @@ const textEllipsis = (width = '200px') => css`
   width: ${width};
   text-overflow: ellipsis;
 `;
+
 export default {
   height,
   zIndex,

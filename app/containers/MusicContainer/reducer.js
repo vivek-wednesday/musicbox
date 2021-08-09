@@ -10,7 +10,7 @@ import get from 'lodash/get'
 import { createActions } from 'reduxsauce'
 
 
-export const initialState = { musicName: null, musicData: [], musicError: null }
+export const initialState = { musicName: null, musicData: {}, musicError: null }
 
 export const { Types: musicContainerTypes, Creators: musicContainerCreators } = createActions({
   requestGetMusic: ['musicName'],

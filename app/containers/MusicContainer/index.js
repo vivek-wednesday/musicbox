@@ -6,7 +6,7 @@
 
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { Input } from 'antd';
+import { Input , Row } from 'antd';
 import { connect } from 'react-redux'
 import { injectIntl } from 'react-intl'
 
@@ -18,6 +18,7 @@ import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
+import StyledCard from '@app/components/StyledCard/index';
 
 
 const { Search } = Input;
@@ -53,6 +54,9 @@ export function MusicContainer({ dispatchGetMusic,
       <StyledSearch data-testid="search-bar" placeholder={intl.formatMessage({ "id": 'search_placeholder' })}
         size="large" enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)} />
+      <Row gutter={[40, 24]} justify="center">
+        <StyledCard musicData={musicData} />
+      </Row>
     </Container>
   )
 }
