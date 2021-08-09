@@ -23,7 +23,7 @@ export const useApi = (type = 'itunes') => {
 export const createApiClientWithTransForm = baseURL => {
   const api = create({
     baseURL,
-    headers: { 'Content-Type': 'text/html', "Access-Control-Allow-Origin": "*" }
+    headers: { 'Content-Type': 'application/json' }
   });
   api.addResponseTransform(response => {
     const { ok, data } = response;
