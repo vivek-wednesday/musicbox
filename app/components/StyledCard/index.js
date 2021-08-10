@@ -12,27 +12,53 @@ import {
   CustomerServiceOutlined,
   PauseCircleOutlined
 } from '@ant-design/icons';
-import { isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
-import { T } from '@components/T';
-import { colors } from '@themes/index';
+import { isEmpty } from 'lodash';
 import styled from 'styled-components';
+import { styles } from '@themes';
+import { T } from '@components/T';
+import If from '@components/If';
+import { BACKWARD, FORWARD, PAUSE, PLAY } from '@utils/constants';
 
 // Function to improve image resolution as well as deal with undefined data.
-function getImage(str) {
-  var escapedFind = '100x100'.replace(/([.*+?^=!:${}()|\]\\])/g, '\\$1');
+function improveImg(str) {
+  const escapedFind = '100x100'.replace(/([.*+?^=!:${}()|\]\\])/g, '\\$1');
   return str.replace(new RegExp(escapedFind, 'g'), '300x300');
 }
 
 const StyledSmall = styled.small`
-    font-size: 14px;
-    color: gray;
-    font-weight: normal;
-    &:hover {
-      font-size: 16px;
-      color: coralred;
-    }
-  `;
+  font-size: 14px;
+  color: gray;
+  font-weight: normal;
+  &:hover {
+    font-size: 16px;
+    color: coralred;
+  }
+`;
+
+const ImgStyle = styled.img`
+  border-radius: 30% !important;
+  padding: 10px;
+`;
+
+const Play = styled(PlayCircleOutlined)`
+  ${styles.primaryIcon}
+`;
+
+const DisabledPlay = styled(PlayCircleOutlined)`
+  ${styles.disabledIcon}
+`;
+
+const Pause = styled(PauseCircleOutlined)`
+  ${styles.primaryIcon}
+`;
+
+const Forward = styled(ForwardOutlined)`
+  ${styles.secondaryIcon}
+`;
+const Backward = styled(BackwardOutlined)`
+  ${styles.secondaryIcon}
+`;
 
 function StyledCard(props) {
   const { musicData } = props;
@@ -80,96 +106,65 @@ function StyledCard(props) {
     }
   }
 
-  const imgStyle = {
-    borderBottomLeftRadius: 35, 
-    borderBottomRightRadius: 35, 
-    padding: 10 
-  }
-
-  const primaryStyle = {
-    fontSize: 40,
-    color: colors.primaryBtn
-  }
-
-  const secondaryStyle = { 
-    fontSize: 35,
-    color: colors.secondaryBtn 
-  }
-
-  return musicData === undefined ? (
-    <T data-testid="no-music-data" id="no_results" />
-  ) : isEmpty(musicData.results) ? (
-    <T data-testid="no-music-data" id="no_results" />
-  ) : (
-    musicData.results.slice(0, 10).map((item, index) => {
-      const data = musicData.results[index];
-      return (
-        <Col key={index}>
-          <Card
-            data-testid="card-wrapper"
-            key={data.trackId}
-            className="neumorphic"
-            style={{ width: 300 }}
-            cover={
-              <img
-                alt="example"
-                src={getImage(data.artworkUrl100)}
-                style={imgStyle}
+  return (
+    <If condition={!isEmpty(musicData.results)} otherwise={<T data-testid="no-music-data" id="no_results" />}>
+      {musicData.results.slice(0, 10).map((item, index) => {
+        const data = musicData.results[index];
+        return (
+          <Col key={index}>
+            <Card
+              data-testid="card-wrapper"
+              key={data.trackId}
+              className="neumorphic"
+              style={{ width: 300 }}
+              cover={<ImgStyle alt="example" src={improveImg(data.artworkUrl100)} />}
+              actions={[
+                <Backward
+                  key="backward"
+                  onClick={() => {
+                    controlAudio(index, BACKWARD);
+                  }}
+                />,
+                  <If
+                    key={index}
+                    condition={isPlaying}
+                    otherwise={
+                      <Play
+                        key="play"
+                        onClick={() => {
+                          controlAudio(index, PLAY);
+                        }}
+                      />
+                    }
+                  >
+                    <If condition={currentSong === index} otherwise={<DisabledPlay key="disabled-play" />}>
+                      <Pause
+                        key="play"
+                        onClick={() => {
+                          controlAudio(index, PAUSE);
+                        }}
+                      />
+                    </If>
+                  </If>,
+                <Forward
+                  key="forward"
+                  onClick={() => {
+                    controlAudio(index, FORWARD);
+                  }}
+                />
+              ]}
+            >
+              <Meta
+                avatar={<CustomerServiceOutlined style={{ fontSize: 20 }} spin={currentSong === index} />}
+                title={data.trackCensoredName}
               />
-            }
-            actions={[
-              <BackwardOutlined
-                key="backward"
-                style={secondaryStyle}
-                onClick={() => {
-                  controlAudio(index, 'backward');
-                }}
-              />,
-              <>
-                {isPlaying ? (
-                  currentSong === index ? (
-                    <PauseCircleOutlined
-                      key="play"
-                      style={primaryStyle}
-                      onClick={() => {
-                        controlAudio(index, 'pause');
-                      }}
-                    />
-                  ) : (
-                    <PlayCircleOutlined key="play" style={{fontSize: 40}} />
-                  )
-                ) : (
-                  <PlayCircleOutlined
-                    key="play"
-                    style={primaryStyle}
-                    onClick={() => {
-                      controlAudio(index, 'play');
-                    }}
-                  />
-                )}
-              </>,
-              <ForwardOutlined
-                key="forward"
-                style={secondaryStyle}
-                onClick={() => {
-                  controlAudio(index, 'forward');
-                }}
-              />
-            ]}
-          >
-            <Meta
-              avatar={<CustomerServiceOutlined style={{ fontSize: 20 }} spin={currentSong === index ? true : false} />}
-              title={data.trackCensoredName}
-            />
-            <Meta
-              title={<StyledSmall>{data.artistName}</StyledSmall>}
-              description={showProgressBar(index)}
-            />
-            <audio ref={ele => audioList.current[index] = ele} src={data.previewUrl} preload="none" loop />
-          </Card>
-        </Col>
-      );
-    })
+              <Meta title={<StyledSmall>{data.artistName}</StyledSmall>} description={showProgressBar(index)} />
+              <audio ref={ele => (audioList.current[index] = ele)} src={data.previewUrl} preload="none" loop />
+            </Card>
+          </Col>
+        );
+      })}
+    </If>
   );
 }
 

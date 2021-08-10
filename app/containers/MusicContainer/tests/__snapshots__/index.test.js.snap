@@ -48,17 +48,11 @@ exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
       </span>
     </span>
   </span>
-  <div
-    class="ant-row ant-row-center"
-    data-testid="grid"
-    style="margin: -12px -20px -12px -20px;"
+  <p
+    class="T__StyledText-gjlic1-0 kYcyRq"
+    data-testid="no-music-data"
   >
-    <p
-      class="T__StyledText-gjlic1-0 kYcyRq"
-      data-testid="no-music-data"
-    >
-      no_results
-    </p>
-  </div>
+    no_results
+  </p>
 </div>
 `;

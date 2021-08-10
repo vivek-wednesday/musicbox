@@ -10,23 +10,24 @@ import StyledCard from '../index';
 import { data } from './testData';
 
 describe('<StyledCard />', () => {
-
+  
   const sampleData = {
     results: data
   }
 
   it('should render and match the snapshot', () => {
-    const { baseElement } = renderWithIntl(<StyledCard />);
+    const { baseElement } = renderWithIntl(<StyledCard musicData={sampleData} />);
     expect(baseElement).toMatchSnapshot();
   });
-
-  it('should show error if music data is not defined', () => {
-    const { getAllByTestId } = renderWithIntl(<StyledCard />);
-    expect(getAllByTestId('no-music-data')).toBeTruthy;
-  });
-
-  it('should render cards with music data',async () => {
+  
+  it('should render cards with music data', () => {
     const { getAllByTestId } = renderWithIntl(<StyledCard musicData={sampleData} />);
     expect(getAllByTestId('card-wrapper')).toBeTruthy;
+  });
+
+  it('should render error message without music data', () => {
+    sampleData.results.length=0;
+    const { getAllByTestId } = renderWithIntl(<StyledCard musicData={sampleData} />);
+    expect(getAllByTestId('no-music-data')).toBeTruthy;
   });
 });
