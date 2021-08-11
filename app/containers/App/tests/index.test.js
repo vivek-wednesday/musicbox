@@ -1,3 +1,4 @@
+
 import { renderWithIntl } from '@utils/testUtils';
 import App from '../index';
 

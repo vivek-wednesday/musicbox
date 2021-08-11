@@ -93,6 +93,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -119,6 +120,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -148,6 +150,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -260,6 +263,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -286,6 +290,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -315,6 +320,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -427,6 +433,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -453,6 +460,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -482,6 +490,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -594,6 +603,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -620,6 +630,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -649,6 +660,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -761,6 +773,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -787,6 +800,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -816,6 +830,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -928,6 +943,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -954,6 +970,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -983,6 +1000,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -1095,6 +1113,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -1121,6 +1140,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -1150,6 +1170,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -1262,6 +1283,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -1288,6 +1310,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -1317,6 +1340,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -1429,6 +1453,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -1455,6 +1480,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -1484,6 +1510,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >
@@ -1596,6 +1623,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="backward"
                 class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                data-testid="backward"
                 role="img"
                 tabindex="-1"
               >
@@ -1622,6 +1650,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="play-circle"
                 class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                data-testid="play"
                 role="img"
                 tabindex="-1"
               >
@@ -1651,6 +1680,7 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <span
                 aria-label="forward"
                 class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                data-testid="forward"
                 role="img"
                 tabindex="-1"
               >

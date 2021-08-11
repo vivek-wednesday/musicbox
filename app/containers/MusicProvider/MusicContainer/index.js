@@ -17,9 +17,9 @@ import { debounce, isEmpty } from 'lodash';
 import If from '@components/If';
 import { T } from '@components/T';
 import StyledCard from '@components/StyledCard';
-import { musicContainerCreators } from './reducer';
-import musicContainerSaga from './saga';
-import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors';
+import { musicContainerCreators } from '../reducer';
+import musicContainerSaga from '../saga';
+import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from '../selectors';
 
 const { Search } = Input;
 
