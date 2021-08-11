@@ -21,7 +21,7 @@ const getFontStyle = type => (fonts.style[type] ? fonts.style[type] : () => { })
 export const T = ({ type, text, id, marginBottom, values, ...otherProps }) => (
   <StyledText data-testid="t" font={getFontStyle(type)} marginBottom={marginBottom} {...otherProps}>
     <If condition={id} otherwise={text}>
-      <FormattedMessage id={id} values={values} />
+      <FormattedMessage id={id} values={values} defaultMessage="This is a default message" />
     </If>
   </StyledText>
 );
@@ -31,7 +31,7 @@ T.propTypes = {
   marginBottom: PropTypes.number,
   values: PropTypes.object,
   text: PropTypes.string,
-  type: PropTypes.oneOfType(Object.keys(fonts.style))
+  type: PropTypes.string,
 };
 
 T.defaultProps = {

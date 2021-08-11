@@ -51,12 +51,12 @@ export function MusicContainer({
   };
 
   const debounceHandleOnChange = debounce(handleOnChange, 400);
-
+ 
   return (
     <Container data-testid="music-container">
       <StyledSearch
         data-testid="search-bar"
-        placeholder={intl.formatMessage({ id: 'search_placeholder' })}
+        placeholder={intl.formatMessage({ id: 'search_placeholder', defaultMessage: "Search song" })}
         size="large"
         enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)}
