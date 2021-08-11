@@ -5,6 +5,10 @@ import { useIntl } from 'react-intl';
 // 'intl' service singleton reference
 let intl;
 
+export const setIntl = i => {
+  intl = i;
+}
+
 export function IntlGlobalProvider({ children }) {
   intl = useIntl(); // Keep the 'intl' service reference
   return children;
@@ -15,4 +19,4 @@ export function appIntl() {
   return intl;
 }
 
-export const translate = (id, values = {}) => intl.formatMessage({ id }, values);
+export const translate = (id, values = {}) => intl.formatMessage({ id }, values)

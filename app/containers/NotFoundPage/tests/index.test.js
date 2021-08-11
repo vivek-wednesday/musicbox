@@ -15,4 +15,5 @@ describe('<NotFoundPage /> tests', () => {
     );
     expect(firstChild).toMatchSnapshot();
   });
+
 });
