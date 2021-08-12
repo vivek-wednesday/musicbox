@@ -40,28 +40,28 @@ exports[`<MusicDetails /> container tests should render and match the snapshot 1
           class="ant-card-body"
         >
           <h3
-            class="MusicDetails__Price-sc-1vt2rzs-2 fUrdsU"
+            class="MusicDetails__Price-sc-1vt2rzs-2 feOqM"
             data-testid="price"
           >
             Price: $
             1.29
           </h3>
           <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 kAyqlp"
+            class="MusicDetails__Para-sc-1vt2rzs-1 ekhBVV"
             data-testid="name"
           >
             Artist Name: 
             Jack Johnson
           </p>
           <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 kAyqlp"
+            class="MusicDetails__Para-sc-1vt2rzs-1 ekhBVV"
             data-testid="genre"
           >
             Genre: 
             Rock
           </p>
           <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 kAyqlp"
+            class="MusicDetails__Para-sc-1vt2rzs-1 ekhBVV"
             data-testid="rating"
           >
             Rating: 

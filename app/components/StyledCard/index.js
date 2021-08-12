@@ -19,6 +19,7 @@ import { styles } from '@themes';
 import { T } from '@components/T';
 import If from '@components/If';
 import { BACKWARD, FORWARD, PAUSE, PLAY } from '@utils/constants';
+import { Link } from 'react-router-dom';
 
 // Function to improve image resolution as well as deal with undefined data.
 export function improveImg(str) {
@@ -163,7 +164,7 @@ function StyledCard(props) {
                 title={data.trackCensoredName}
               />
               
-              <Meta title={<StyledSmall>{data.artistName}</StyledSmall>} description={showProgressBar(index)} />
+              <Meta title={<Link exact to={`/track/${item.trackId}`}><StyledSmall>{data.artistName}</StyledSmall></Link>} description={showProgressBar(index)} />
               <audio ref={ele => (audioList.current[index] = ele)} src={data.previewUrl} preload="none" loop />
             </Card>
           </Col>
@@ -173,7 +174,7 @@ function StyledCard(props) {
   );
 }
 
-//<Link exact to={`/track/${item.trackId}`}>Details</Link>
+//Details
 
 StyledCard.propTypes = {
   musicData: PropTypes.object

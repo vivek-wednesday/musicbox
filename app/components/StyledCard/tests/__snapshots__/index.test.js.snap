@@ -69,11 +69,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577741"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -239,11 +243,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577808"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -409,11 +417,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577830"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -579,11 +591,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469578000"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -749,11 +765,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577820"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -919,11 +939,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1452716948"
                 >
-                  The Tom Russell Band
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    The Tom Russell Band
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -1089,11 +1113,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/263301273"
                 >
-                  This Bike Is a Pipe Bomb
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    This Bike Is a Pipe Bomb
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -1259,11 +1287,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577992"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -1429,11 +1461,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577811"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
@@ -1599,11 +1635,15 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
               <div
                 class="ant-card-meta-title"
               >
-                <small
-                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                <a
+                  href="/track/1469577987"
                 >
-                  Jack Johnson
-                </small>
+                  <small
+                    class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                  >
+                    Jack Johnson
+                  </small>
+                </a>
               </div>
             </div>
           </div>
