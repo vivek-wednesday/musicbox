@@ -12,14 +12,15 @@ import {
   CustomerServiceOutlined,
   PauseCircleOutlined
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { isEmpty } from 'lodash';
 import styled from 'styled-components';
 import { styles } from '@themes';
 import { T } from '@components/T';
 import If from '@components/If';
+//import routeConstants from '@utils/routeConstants';
 import { BACKWARD, FORWARD, PAUSE, PLAY } from '@utils/constants';
-import { Link } from 'react-router-dom';
 
 // Function to improve image resolution as well as deal with undefined data.
 export function improveImg(str) {
@@ -164,7 +165,7 @@ function StyledCard(props) {
                 title={data.trackCensoredName}
               />
               
-              <Meta title={<Link exact to={`/track/${item.trackId}`}><StyledSmall>{data.artistName}</StyledSmall></Link>} description={showProgressBar(index)} />
+              <Meta title={<Link exact={"true"} to={`/${item.trackId}`}><StyledSmall>{data.artistName}</StyledSmall></Link>} description={showProgressBar(index)} />
               <audio ref={ele => (audioList.current[index] = ele)} src={data.previewUrl} preload="none" loop />
             </Card>
           </Col>

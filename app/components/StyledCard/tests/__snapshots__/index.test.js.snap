@@ -70,7 +70,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577741"
+                  exact="true"
+                  href="/1469577741"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -244,7 +245,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577808"
+                  exact="true"
+                  href="/1469577808"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -418,7 +420,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577830"
+                  exact="true"
+                  href="/1469577830"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -592,7 +595,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469578000"
+                  exact="true"
+                  href="/1469578000"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -766,7 +770,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577820"
+                  exact="true"
+                  href="/1469577820"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -940,7 +945,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1452716948"
+                  exact="true"
+                  href="/1452716948"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -1114,7 +1120,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/263301273"
+                  exact="true"
+                  href="/263301273"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -1288,7 +1295,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577992"
+                  exact="true"
+                  href="/1469577992"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -1462,7 +1470,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577811"
+                  exact="true"
+                  href="/1469577811"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
@@ -1636,7 +1645,8 @@ exports[`<StyledCard /> should render and match the snapshot 1`] = `
                 class="ant-card-meta-title"
               >
                 <a
-                  href="/track/1469577987"
+                  exact="true"
+                  href="/1469577987"
                 >
                   <small
                     class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"

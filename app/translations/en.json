@@ -14,5 +14,9 @@
   "itunes_scraper": "iTunes Scraper",
   "search_placeholder": "Search your favorite song",
   "no_results": "Oops! There's nothing here.",
-  "unrated": "Unrated"
+  "unrated": "Unrated",
+  "price": "Price: ${price}",
+  "artist": "Artist Name: {name}",
+  "genre": "Genre: {genre}",
+  "rating": "Rating: {rating}"
 }
