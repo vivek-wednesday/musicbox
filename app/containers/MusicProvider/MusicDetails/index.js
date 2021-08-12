@@ -17,7 +17,7 @@ import styled from 'styled-components';
 import { improveImg } from '@components/StyledCard';
 import If from '@components/If';
 import musicContainerSaga from '../saga';
-import { selectMusicData, selectRoutePath } from '../selectors';
+import { selectMusicData } from '../selectors';
 import { musicContainerCreators } from '../reducer';
 
 const StyleDiv = styled.div`
@@ -73,7 +73,6 @@ MusicDetails.propTypes = {
 
 const mapStateToProps = createStructuredSelector({
   musicData: selectMusicData(),
-  pathName: selectRoutePath()
 });
 
 function mapDispatchToProps(dispatch) {

@@ -19,7 +19,7 @@ import styled from 'styled-components';
 import { styles } from '@themes';
 import { T } from '@components/T';
 import If from '@components/If';
-//import routeConstants from '@utils/routeConstants';
+import routeConstants from '@utils/routeConstants';
 import { BACKWARD, FORWARD, PAUSE, PLAY } from '@utils/constants';
 
 // Function to improve image resolution as well as deal with undefined data.
@@ -86,16 +86,16 @@ function StyledCard(props) {
 
   function controlAudio(val, type) {
     const ele = audioList.current[val];
-    if (type === 'backward') {
+    if (type === BACKWARD) {
       ele.currentTime -= 5;
-    } else if (type === 'forward') {
+    } else if (type === FORWARD) {
       ele.currentTime += 5;
-    } else if (type === 'play') {
+    } else if (type === PLAY) {
       ele.play();
       setIsPlaying(true);
       setCurrentSong(val);
       showProgress(ele);
-    } else if (type === 'pause') {
+    } else if (type === PAUSE) {
       ele.pause();
       setIsPlaying(false);
       clearInterval(itrvl);
@@ -106,6 +106,11 @@ function StyledCard(props) {
     if (currentSong === id) {
       return <Progress percent={progress} showInfo={false} />;
     }
+  }
+
+  function resolveLink(trackId) {
+    const path = routeConstants.details.route;
+    return path.replace(':id', trackId);
   }
 
   return (
@@ -128,29 +133,29 @@ function StyledCard(props) {
                     controlAudio(index, BACKWARD);
                   }}
                 />,
-                  <If
-                    key={index}
-                    condition={isPlaying}
-                    otherwise={
-                      <Play
-                        key={PLAY}
-                        data-testid="play"
-                        onClick={() => {
-                          controlAudio(index, PLAY);
-                        }}
-                      />
-                    }
-                  >
-                    <If condition={currentSong === index} otherwise={<DisabledPlay key={PLAY} data-testid="disabled" />}>
-                      <Pause
-                        key={PAUSE}
-                        data-testid="pause"
-                        onClick={() => {
-                          controlAudio(index, PAUSE);
-                        }}
-                      />
-                    </If>
-                  </If>,
+                <If
+                  key={index}
+                  condition={isPlaying}
+                  otherwise={
+                    <Play
+                      key={PLAY}
+                      data-testid="play"
+                      onClick={() => {
+                        controlAudio(index, PLAY);
+                      }}
+                    />
+                  }
+                >
+                  <If condition={currentSong === index} otherwise={<DisabledPlay key={PLAY} data-testid="disabled" />}>
+                    <Pause
+                      key={PAUSE}
+                      data-testid="pause"
+                      onClick={() => {
+                        controlAudio(index, PAUSE);
+                      }}
+                    />
+                  </If>
+                </If>,
                 <Forward
                   key={FORWARD}
                   data-testid="forward"
@@ -164,8 +169,15 @@ function StyledCard(props) {
                 avatar={<CustomerServiceOutlined style={{ fontSize: 20 }} spin={currentSong === index} />}
                 title={data.trackCensoredName}
               />
-              
-              <Meta title={<Link exact={"true"} to={`/${item.trackId}`}><StyledSmall>{data.artistName}</StyledSmall></Link>} description={showProgressBar(index)} />
+
+              <Meta
+                title={
+                  <Link exact="true" to={resolveLink(item.trackId)}>
+                    <StyledSmall>{data.artistName}</StyledSmall>
+                  </Link>
+                }
+                description={showProgressBar(index)}
+              />
               <audio ref={ele => (audioList.current[index] = ele)} src={data.previewUrl} preload="none" loop />
             </Card>
           </Col>

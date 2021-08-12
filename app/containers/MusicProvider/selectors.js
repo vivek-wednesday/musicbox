@@ -6,20 +6,12 @@ import { initialState } from './reducer'
  */
 
 const selectMusicContainerDomain = state => state.musicContainer || initialState
-const selectRouterDomain = state => state.router.location
 
 export const selectMusicContainer = () =>
   createSelector(
     selectMusicContainerDomain,
     substate => substate
   );
-
-export const selectRoutePath = () => 
-  createSelector(
-      selectRouterDomain,
-      substate => get(substate, 'pathname')
-  );
-
 
 export const selectMusicData = () =>
   createSelector(

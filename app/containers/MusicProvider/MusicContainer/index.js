@@ -42,6 +42,7 @@ export function MusicContainer({
   musicError = null,
   musicName
 }) {
+
   const handleOnChange = songName => {
     if (!isEmpty(songName)) {
       dispatchGetMusic(songName);
