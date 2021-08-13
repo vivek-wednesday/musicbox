@@ -6,9 +6,10 @@
  */
 
 import React from 'react';
-import { renderWithIntl, timeout } from '@utils/testUtils';
-import { MusicContainerTest as MusicContainer } from '../index';
 import {fireEvent} from "@testing-library/react"
+import { renderWithIntl, timeout } from '@utils/testUtils';
+import { MusicContainerTest as MusicContainer, mapDispatchToProps } from '../index';
+
 
 describe('<MusicContainer /> tests', () => {
   it('should render and match the snapshot', () => {
@@ -58,6 +59,20 @@ describe('<MusicContainer /> tests', () => {
   it('should render error message if musicData is empty', () => {
     const { getByTestId } = renderWithIntl(<MusicContainer />)
     expect(getByTestId('no-music-data')).toBeTruthy;
+  })
+
+  it("should dispatch get music from mapDispatchToProps", () => {
+    const dispatch = jest.fn();
+    const spy = jest.spyOn(mapDispatchToProps(dispatch), 'dispatchGetMusic')
+    mapDispatchToProps(dispatch).dispatchGetMusic();
+    expect(spy).toHaveBeenCalled
+  })
+
+  it("should dispatch clear music from mapDispatchToProps", () => {
+    const dispatch = jest.fn();
+    const spy = jest.spyOn(mapDispatchToProps(dispatch), 'dispatchClearGetMusic')
+    mapDispatchToProps(dispatch).dispatchClearGetMusic();
+    expect(spy).toHaveBeenCalled
   })
 })
 

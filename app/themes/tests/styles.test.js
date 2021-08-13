@@ -16,5 +16,13 @@ describe('styles', () => {
     it('should create disabled icon styles', () => {
         expect(styles.disabledIcon()).toEqual(["font-size:40px !important;"])
     })
+
+    it('should configure flex with row', () => {
+        expect(styles.configureFlex("row")).toEqual(["display:flex;flex:1;flex-direction:row;", " flex-direction:", "row", ";justify-content:", "center", ";align-items:", "center", ";align-content:", "center", ";flex-basis:", "0", ";flex-grow:", "1", ";flex-shrink:", "0", ";",])
+    })
+
+    it('should configure flex with column', () => {
+        expect(styles.configureFlex("column")).toEqual(["display:flex;flex:1;flex-direction:column;", " flex-direction:", "column", ";justify-content:", "center", ";align-items:", "center", ";align-content:", "center", ";flex-basis:", "0", ";flex-grow:", "1", ";flex-shrink:", "0", ";",])
+    })
     
 })

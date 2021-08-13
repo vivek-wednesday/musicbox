@@ -131,6 +131,7 @@ const disabledIcon = () => css`
 `;
 
 export default {
+  configureFlex,
   height,
   zIndex,
   textEllipsis,

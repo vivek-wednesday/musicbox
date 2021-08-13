@@ -4,7 +4,7 @@
  *
  */
 
-import React from 'react';
+import React, { memo, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card } from 'antd';
@@ -12,13 +12,14 @@ import { injectIntl } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { injectSaga } from 'redux-injectors';
-import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { improveImg } from '@components/StyledCard';
 import If from '@components/If';
 import musicContainerSaga from '../saga';
-import { selectMusicData } from '../selectors';
 import { musicContainerCreators } from '../reducer';
+import { useParams } from 'react-router-dom';
+import { selectDetailError, selectNewData } from '../selectors';
+import { T } from '@app/components/T/index';
 
 const StyleDiv = styled.div`
   display: flex;
@@ -39,46 +40,50 @@ const Title = styled.h3`
   text-align: center;
 `;
 
-export function MusicDetails({ musicData, intl, dispatchGetMusic }) {
-  const path = useParams();
+export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
+  const path = useParams()
+  
+  useEffect(() => {
+    dispatchGetMusicDetail(path.id)
+  }, [])
+
   return (
     <StyleDiv>
-      {musicData.results.map((item, index) => (
-        <If key={index} condition={item.trackId === +path.id} otherwise={null}>
+        <If condition={!detailError} otherwise={<T data-testid="no-music-data" id="not_found" />}>
           <Card
             data-testid="music-details"
             style={{ width: 300 }}
-            cover={<img alt="example" src={improveImg(item.artworkUrl100)} />}
-            title={<Title>{item.trackName}</Title>}
+            cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
+            title={<Title>{musicResult.trackName}</Title>}
           >
-            <Price data-testid="price">{intl.formatMessage({ id: 'price' }, { price: item.trackPrice })}</Price>
-            <Para data-testid="name">{intl.formatMessage({ id: 'artist' }, { name: item.artistName })}</Para>
-            <Para data-testid="genre">{intl.formatMessage({ id: 'genre' }, { genre: item.primaryGenreName })}</Para>
+            <Price data-testid="price">{intl.formatMessage({ id: 'price' }, { price: musicResult.trackPrice })}</Price>
+            <Para data-testid="name">{intl.formatMessage({ id: 'artist' }, { name: musicResult.artistName })}</Para>
+            <Para data-testid="genre">{intl.formatMessage({ id: 'genre' }, { genre: musicResult.primaryGenreName })}</Para>
             <Para data-testid="rating">
-              {intl.formatMessage({ id: 'rating' }, { rating: item.contentAdvisoryRating ?? 'NR' })}
+              {intl.formatMessage({ id: 'rating' }, { rating: musicResult.contentAdvisoryRating ?? 'NR' })}
             </Para>
           </Card>
         </If>
-      ))}
     </StyleDiv>
   );
 }
 
 MusicDetails.propTypes = {
-  musicData: PropTypes.object,
-  pathName: PropTypes.string,
   intl: PropTypes.object,
-  dispatchGetMusic: PropTypes.func
+  dispatchGetMusicDetail: PropTypes.func,
+  musicResult: PropTypes.object,
+  detailError: PropTypes.string
 };
 
 const mapStateToProps = createStructuredSelector({
-  musicData: selectMusicData(),
+  musicResult: selectNewData(),
+  detailError: selectDetailError(),
 });
 
-function mapDispatchToProps(dispatch) {
-  const { requestGetMusic } = musicContainerCreators;
+export function mapDispatchToProps(dispatch) {
+  const { requestMusicDetail } = musicContainerCreators;
   return {
-    dispatchGetMusic: songName => dispatch(requestGetMusic(songName))
+    dispatchGetMusicDetail: id => dispatch(requestMusicDetail(id))
   };
 }
 
@@ -87,6 +92,7 @@ const withConnect = connect(mapStateToProps, mapDispatchToProps);
 export default compose(
   injectIntl,
   withConnect,
+  memo,
   injectSaga({ key: 'musicContainer', saga: musicContainerSaga })
 )(MusicDetails);
 

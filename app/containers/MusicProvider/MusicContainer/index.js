@@ -19,7 +19,15 @@ import { T } from '@components/T';
 import StyledCard from '@components/StyledCard';
 import { musicContainerCreators } from '../reducer';
 import musicContainerSaga from '../saga';
-import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from '../selectors';
+import {
+  selectDetailError,
+  selectMusicContainer,
+  selectMusicData,
+  selectMusicDetail,
+  selectMusicError,
+  selectMusicName,
+  selectNewData
+} from '../selectors';
 
 const { Search } = Input;
 
@@ -40,9 +48,10 @@ export function MusicContainer({
   intl,
   musicData = {},
   musicError = null,
-  musicName
+  musicName,
+  newData = {},
+  errorDetail = null
 }) {
-
   const handleOnChange = songName => {
     if (!isEmpty(songName)) {
       dispatchGetMusic(songName);
@@ -52,12 +61,12 @@ export function MusicContainer({
   };
 
   const debounceHandleOnChange = debounce(handleOnChange, 400);
- 
+
   return (
     <Container data-testid="music-container">
       <StyledSearch
         data-testid="search-bar"
-        placeholder={intl.formatMessage({ id: 'search_placeholder', defaultMessage: "Search song" })}
+        placeholder={intl.formatMessage({ id: 'search_placeholder', defaultMessage: 'Search song' })}
         size="large"
         enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)}
@@ -80,17 +89,22 @@ MusicContainer.propTypes = {
     results: PropTypes.array
   }),
   musicError: PropTypes.string,
-  musicName: PropTypes.string
+  musicName: PropTypes.string,
+  newData: PropTypes.object,
+  errorDetail: PropTypes.string
 };
 
 const mapStateToProps = createStructuredSelector({
   musicContainer: selectMusicContainer(),
   musicData: selectMusicData(),
   musicError: selectMusicError(),
-  musicName: selectMusicName()
+  musicName: selectMusicName(),
+  newData: selectNewData(),
+  musicDetail: selectMusicDetail(),
+  errorDetail: selectDetailError()
 });
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   const { requestGetMusic, clearGetMusic } = musicContainerCreators;
   return {
     dispatchGetMusic: songName => dispatch(requestGetMusic(songName)),
