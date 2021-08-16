@@ -21,11 +21,11 @@ import { useParams } from 'react-router-dom';
 import { selectDetailError, selectNewData } from '../selectors';
 import { T } from '@app/components/T/index';
 
-const StyleDiv = styled.div`
+/* const StyleDiv = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-`;
+`; */
 const Para = styled.p`
   background-color: lightyellow;
   padding: 5px;
@@ -42,16 +42,10 @@ const Title = styled.h3`
 
 export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
   const path = useParams()
-  
-  /* useEffect(() => {
-    dispatchGetMusicDetail(path.id)
-  }, []) */
+  dispatchGetMusicDetail(path.id)
 
   return (
-    <StyleDiv>
-        {dispatchGetMusicDetail(path.id)}
-       
-        { musicResult ? <Card
+       musicResult ? <Card
             data-testid="music-details"
             style={{ width: 300 }}
             cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
@@ -63,8 +57,7 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
             <Para data-testid="rating">
               {intl.formatMessage({ id: 'rating' }, { rating: musicResult.contentAdvisoryRating ?? 'NR' })}
             </Para>
-          </Card> : <T data-testid="no-music-data" id="not_found" />}
-    </StyleDiv>
+          </Card> : <T data-testid="no-music-data" id="not_found" />
   );
 }
 

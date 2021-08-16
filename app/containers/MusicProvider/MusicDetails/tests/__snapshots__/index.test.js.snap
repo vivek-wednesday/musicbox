@@ -4,66 +4,62 @@ exports[`<MusicDetails /> container tests should render and match the snapshot 1
 <body>
   <div>
     <div
-      class="MusicDetails__StyleDiv-sc-1vt2rzs-0 hwYYSu"
+      class="ant-card ant-card-bordered"
+      data-testid="music-details"
+      style="width: 300px;"
     >
       <div
-        class="ant-card ant-card-bordered"
-        data-testid="music-details"
-        style="width: 300px;"
+        class="ant-card-head"
       >
         <div
-          class="ant-card-head"
+          class="ant-card-head-wrapper"
         >
           <div
-            class="ant-card-head-wrapper"
+            class="ant-card-head-title"
           >
-            <div
-              class="ant-card-head-title"
+            <h3
+              class="MusicDetails__Title-sc-1vt2rzs-2 jllUPU"
             >
-              <h3
-                class="MusicDetails__Title-sc-1vt2rzs-3 gSqjiZ"
-              >
-                Upside Down
-              </h3>
-            </div>
+              Upside Down
+            </h3>
           </div>
         </div>
-        <div
-          class="ant-card-cover"
+      </div>
+      <div
+        class="ant-card-cover"
+      >
+        <img
+          alt="example"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+        />
+      </div>
+      <div
+        class="ant-card-body"
+      >
+        <h3
+          class="MusicDetails__Price-sc-1vt2rzs-1 cBLTOZ"
+          data-testid="price"
         >
-          <img
-            alt="example"
-            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
-          />
-        </div>
-        <div
-          class="ant-card-body"
+          Price: $1.29
+        </h3>
+        <p
+          class="MusicDetails__Para-sc-1vt2rzs-0 heBxlG"
+          data-testid="name"
         >
-          <h3
-            class="MusicDetails__Price-sc-1vt2rzs-2 kMgIPS"
-            data-testid="price"
-          >
-            Price: $1.29
-          </h3>
-          <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 jfMeXz"
-            data-testid="name"
-          >
-            Artist Name: Jack Johnson
-          </p>
-          <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 jfMeXz"
-            data-testid="genre"
-          >
-            Genre: Rock
-          </p>
-          <p
-            class="MusicDetails__Para-sc-1vt2rzs-1 jfMeXz"
-            data-testid="rating"
-          >
-            Rating: NR
-          </p>
-        </div>
+          Artist Name: Jack Johnson
+        </p>
+        <p
+          class="MusicDetails__Para-sc-1vt2rzs-0 heBxlG"
+          data-testid="genre"
+        >
+          Genre: Rock
+        </p>
+        <p
+          class="MusicDetails__Para-sc-1vt2rzs-0 heBxlG"
+          data-testid="rating"
+        >
+          Rating: NR
+        </p>
       </div>
     </div>
   </div>
