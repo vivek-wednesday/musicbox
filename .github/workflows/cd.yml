@@ -21,7 +21,7 @@ jobs:
         run: yarn
       
       - name: Build
-        run: yarn build
+        run: yarn build:uat
 
       - uses: aws-actions/configure-aws-credentials@v1
         with:
