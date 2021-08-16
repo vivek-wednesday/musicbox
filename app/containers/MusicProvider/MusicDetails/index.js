@@ -47,8 +47,8 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
   }, [])
 
   return (
-    <StyleDiv>
-       { musicResult ?
+      musicResult ?
+          <StyleDiv>
           <Card
             data-testid="music-details"
             style={{ width: 300 }}
@@ -62,9 +62,8 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
               {intl.formatMessage({ id: 'rating' }, { rating: musicResult.contentAdvisoryRating ?? 'NR' })}
             </Para>
           </Card>
+          </StyleDiv>
           : <T data-testid="no-music-data" id="not_found" />  
-        }
-    </StyleDiv>
   );
 }
 
