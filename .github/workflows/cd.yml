@@ -28,10 +28,9 @@ jobs:
       - name: Build
         run: yarn build:uat
 
-      - uses: aws-actions/configure-aws-credentials@v1
+      - name: AWS Deploy
+        uses: jakejarvis/s3-sync-action@v0.5.0
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1
-      
-      - run: aws s3 sync ${{ steps.extract_branch.outputs.branch }} s3://musicbox-bucket
+          args: --acl public-read --follow-symlinks
+        env:
+          DEST_DIR: ${{ steps.extract_branch.outputs.branch }}
