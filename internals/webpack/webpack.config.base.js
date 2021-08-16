@@ -5,6 +5,9 @@ const path = require('path');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const colors = require('../../app/themes/colors');
+const { getBasePublicPath } = require('../utils');
+
+const publicPath = getBasePublicPath();
 
 const dotEnvFile = process.env.NODE_ENV === 'production' ? `.env` : `.env.${process.env.NODE_ENV}`;
 const env = dotenv.config({ path: dotEnvFile }).parsed;
@@ -26,8 +29,7 @@ module.exports = options => ({
     {
       // Compile into js/build.js
       path: path.resolve(process.cwd(), 'build'),
-      // to run prod build locally, set public path to '/' instead of '/react-template/'
-      publicPath: '/'
+      publicPath
     },
     options.output
   ), // Merge with env dependent settings
