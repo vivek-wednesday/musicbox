@@ -45,7 +45,7 @@
    const path = useParams()
    useEffect(() => {
      dispatchGetMusicDetail(path.id)
-   }, [])
+   })
  
    return (
         !(musicResult === undefined) ? 
