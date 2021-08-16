@@ -4,7 +4,7 @@
  *
  */
 
- import React, { memo, useEffect  } from 'react';
+ import React, { memo } from 'react';
  import PropTypes from 'prop-types';
  import { connect } from 'react-redux';
  import { Card } from 'antd';
@@ -43,10 +43,7 @@
  
  export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
    const path = useParams()
-   useEffect(() => {
-     dispatchGetMusicDetail(path.id)
-   }, [])
- 
+   dispatchGetMusicDetail(path.id)
    return (
         !(musicResult === undefined) ? 
         <StyleDiv>
