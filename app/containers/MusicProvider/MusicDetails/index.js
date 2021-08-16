@@ -45,7 +45,7 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
   dispatchGetMusicDetail(path.id)
 
   return (
-       musicResult ? <Card
+       !(musicResult === undefined) ? <Card
             data-testid="music-details"
             style={{ width: 300 }}
             cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
