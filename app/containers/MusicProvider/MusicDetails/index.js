@@ -14,7 +14,7 @@ import { compose } from 'redux';
 import { injectSaga } from 'redux-injectors';
 import styled from 'styled-components';
 import { improveImg } from '@components/StyledCard';
-import If from '@components/If';
+//import If from '@components/If';
 import musicContainerSaga from '../saga';
 import { musicContainerCreators } from '../reducer';
 import { useParams } from 'react-router-dom';
@@ -50,8 +50,8 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
   return (
     <StyleDiv>
         {dispatchGetMusicDetail(path.id)}
-        <If condition={!detailError} otherwise={<T data-testid="no-music-data" id="not_found" />}>
-          <Card
+       
+        { musicResult ? <Card
             data-testid="music-details"
             style={{ width: 300 }}
             cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
@@ -63,8 +63,7 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
             <Para data-testid="rating">
               {intl.formatMessage({ id: 'rating' }, { rating: musicResult.contentAdvisoryRating ?? 'NR' })}
             </Para>
-          </Card>
-        </If>
+          </Card> : <T data-testid="no-music-data" id="not_found" />}
     </StyleDiv>
   );
 }
