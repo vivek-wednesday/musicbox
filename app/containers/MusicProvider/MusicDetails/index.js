@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo  } from 'react';
+import React, { memo, useEffect  } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card } from 'antd';
@@ -21,11 +21,12 @@ import { useParams } from 'react-router-dom';
 import { selectDetailError, selectNewData } from '../selectors';
 import { T } from '@app/components/T/index';
 
-/* const StyleDiv = styled.div`
+const StyleDiv = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-`; */
+`;
+
 const Para = styled.p`
   background-color: lightyellow;
   padding: 5px;
@@ -42,10 +43,14 @@ const Title = styled.h3`
 
 export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
   const path = useParams()
-  dispatchGetMusicDetail(path.id)
+  useEffect(() => {
+    dispatchGetMusicDetail(path.id)
+  }, [])
 
   return (
-       !(musicResult === undefined) ? <Card
+       !(musicResult === undefined) ? 
+       <StyleDiv>
+        <Card
             data-testid="music-details"
             style={{ width: 300 }}
             cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
@@ -57,7 +62,8 @@ export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detail
             <Para data-testid="rating">
               {intl.formatMessage({ id: 'rating' }, { rating: musicResult.contentAdvisoryRating ?? 'NR' })}
             </Para>
-          </Card> : <T data-testid="no-music-data" id="not_found" />
+          </Card>
+          </StyleDiv> : <T data-testid="no-music-data" id="not_found" />
   );
 }
 
