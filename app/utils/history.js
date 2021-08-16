@@ -3,7 +3,7 @@ import routeConstants from '@utils/routeConstants';
 const routes = Object.keys(routeConstants);
 const pathname = window.location.pathname;
 let baseUrl = '';
-if (process.env.ENVIRONMENT_NAME === 'uat') {
+if (process.env.NODE_ENV === 'uat') {
   routes.forEach(routeKey => {
     const route = routeConstants[routeKey].route;
     if (pathname.includes(route)) {
