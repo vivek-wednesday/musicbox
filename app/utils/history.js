@@ -15,10 +15,6 @@ if (process.env.ENVIRONMENT_NAME === 'uat') {
       }
     }
   });
-} else if (process.env.NODE_ENV === 'production') {
-    baseUrl = '/react-template'
-} else {
-    baseUrl = '/'
 }
 
 const history = createBrowserHistory({ basename: baseUrl });
