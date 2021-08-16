@@ -6,28 +6,34 @@
  */
 
 import React from 'react';
-import { render } from '@testing-library/react'
+import { renderWithIntl } from '@utils/testUtils';
 import { MusicContainerTest as MusicContainer } from '../index';
-import { IntlProvider } from 'react-intl';
 
 describe('<MusicContainer /> tests', () => {
   it('should render and match the snapshot', () => {
-    const {
-      container: { firstChild }
-    } = render(
-      <IntlProvider locale="en">
-        <MusicContainer />
-      </IntlProvider>
-    );
-    expect(firstChild).toMatchSnapshot();
+    const {baseElement} =renderWithIntl(<MusicContainer />)
+    expect(baseElement).toMatchSnapshot();
   });
+
   it('should render container', () => {
-    const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
+    const { getByTestId } = renderWithIntl(<MusicContainer />)
     expect(getByTestId('music-container')).toBeTruthy;
   })
   it('should render search bar', () => {
-    const { getByTestId } = render(<IntlProvider locale="en"><MusicContainer /></IntlProvider>)
+    const { getByTestId } = renderWithIntl(<MusicContainer />)
     expect(getByTestId('search-bar')).toBeTruthy;
+  })
+  it('should render grid if musicData is present', () => {
+    const sampleData = {
+      resultCount: 10,
+      results: []
+    }
+    const { getByTestId } = renderWithIntl(<MusicContainer musicData={sampleData} />)
+    expect(getByTestId('grid')).toBeTruthy;
+  })
+  it('should render error message if musicData is empty', () => {
+    const { getByTestId } = renderWithIntl(<MusicContainer />)
+    expect(getByTestId('no-music-data')).toBeTruthy;
   })
 })
 

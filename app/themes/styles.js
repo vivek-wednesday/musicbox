@@ -115,10 +115,28 @@ const textEllipsis = (width = '200px') => css`
   width: ${width};
   text-overflow: ellipsis;
 `;
+
+const primaryIcon = () => css`
+  font-size: 40px !important;
+  color: ${colors.primaryBtn} !important;
+`;
+
+const secondaryIcon = () => css`
+  font-size: 35px !important;
+  color: ${colors.secondaryBtn} !important;
+`;
+
+const disabledIcon = () => css`
+  font-size: 40px !important;
+`;
+
 export default {
   height,
   zIndex,
   textEllipsis,
+  primaryIcon,
+  secondaryIcon,
+  disabledIcon,
   margin: {
     top,
     bottom,

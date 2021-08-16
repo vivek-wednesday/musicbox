@@ -6,7 +6,7 @@
 
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { Input } from 'antd';
+import { Input, Row } from 'antd';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
@@ -14,6 +14,9 @@ import { compose } from 'redux';
 import { injectSaga } from 'redux-injectors';
 import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
+import If from '@components/If';
+import { T } from '@components/T';
+import StyledCard from '@components/StyledCard';
 import { musicContainerCreators } from './reducer';
 import musicContainerSaga from './saga';
 import { selectMusicContainer, selectMusicData, selectMusicError, selectMusicName } from './selectors';
@@ -45,19 +48,24 @@ export function MusicContainer({
     } else {
       dispatchClearGetMusic();
     }
-  }
+  };
 
   const debounceHandleOnChange = debounce(handleOnChange, 400);
-
+ 
   return (
     <Container data-testid="music-container">
       <StyledSearch
         data-testid="search-bar"
-        placeholder={intl.formatMessage({ id: 'search_placeholder' })}
+        placeholder={intl.formatMessage({ id: 'search_placeholder', defaultMessage: "Search song" })}
         size="large"
         enterButton
         onChange={evt => debounceHandleOnChange(evt.target.value)}
       />
+      <If condition={!isEmpty(musicData)} otherwise={<T data-testid="no-music-data" id="no_results" />}>
+        <Row data-testid="grid" gutter={[40, 24]} justify="center">
+          <StyledCard musicData={musicData} />
+        </Row>
+      </If>
     </Container>
   );
 }

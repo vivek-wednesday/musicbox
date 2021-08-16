@@ -1,7 +1,6 @@
 import get from 'lodash/get';
 import { createSelector } from 'reselect'
 import { initialState } from './reducer'
-
 /**
  * Direct selector to the musicContainer state domain
  */

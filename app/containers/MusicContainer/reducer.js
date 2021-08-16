@@ -10,7 +10,7 @@ import { createActions } from 'reduxsauce'
 import { translate } from '@app/components/IntlGlobalProvider'
 
 
-export const initialState = { musicName: null, musicData: [], musicError: null }
+export const initialState = { musicName: null, musicData: {}, musicError: null }
 
 export const { Types: musicContainerTypes, Creators: musicContainerCreators } = createActions({
   requestGetMusic: ['musicName'],
