@@ -38,7 +38,7 @@ describe('<For />', () => {
       <For
         of={items}
         noParent
-        isRow={false}
+        isrow={false}
         ParentComponent={props => <span {...props} data-testid="parent-span" />}
         renderItem={item => <div data-testid="child">{`item: ${item}`} </div>}
       />

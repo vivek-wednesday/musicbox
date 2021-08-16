@@ -1,0 +1,1678 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StyledCard /> should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Upside Down
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/5e/5b/3d/5e5b3df4-deb5-da78-5d64-fe51d8404d5c/mzaf_13341178261601361485.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Broken
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8b/fd/81/8bfd81a6-0217-b56c-01b0-7249ed910a35/mzaf_16218415284344588014.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                We're Going To Be Friends
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ce/48/5b/ce485b59-13b7-9859-0431-e602d6347479/mzaf_7168871676263777717.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                My Own Two Hands (feat. Ben Harper)
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0d/1b/1a/0d1b1a37-2068-0e62-2162-0c9822fbc03c/mzaf_4390099184106020569.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Talk of the Town (feat. Kawika Kahiapo)
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9b/a3/4a/9ba34a84-7fd7-cf0d-63fb-527589bba29d/mzaf_10309152793486182212.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b5/eb/82/b5eb828b-bd21-f056-0ce1-dc0e97dde9ec/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Jack Johnson
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  The Tom Russell Band
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview114/v4/86/20/df/8620df4a-0ebd-fcb9-2a26-4b22ef022db2/mzaf_4026325241931918929.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/6e/27/6b/6e276b76-8b2c-6a67-e40f-c2b61ba6e52a/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Jack Johnson
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  This Bike Is a Pipe Bomb
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/fd/bb/38/fdbb38d2-073d-4bc7-68c4-348a0be6d560/mzaf_4150435585996894188.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                Lullaby (feat. Matt Costa)
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0f/df/a2/0fdfa2e8-87ed-b13d-0229-a0ad3520df3e/mzaf_7760700143393860822.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                People Watching
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/15/97/88/159788b4-ead2-7fae-fb88-fd88b28d07eb/mzaf_15974300599566313770.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="ant-col"
+    >
+      <div
+        class="ant-card ant-card-bordered neumorphic"
+        data-testid="card-wrapper"
+        style="width: 300px;"
+      >
+        <div
+          class="ant-card-cover"
+        >
+          <img
+            alt="example"
+            class="StyledCard__ImgStyle-sc-187ttp8-1 dxIMng"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+          />
+        </div>
+        <div
+          class="ant-card-body"
+        >
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-avatar"
+            >
+              <span
+                aria-label="customer-service"
+                class="anticon anticon-customer-service"
+                role="img"
+                style="font-size: 20px;"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="customer-service"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 128c-212.1 0-384 171.9-384 384v360c0 13.3 10.7 24 24 24h184c35.3 0 64-28.7 64-64V624c0-35.3-28.7-64-64-64H200v-48c0-172.3 139.7-312 312-312s312 139.7 312 312v48H688c-35.3 0-64 28.7-64 64v208c0 35.3 28.7 64 64 64h184c13.3 0 24-10.7 24-24V512c0-212.1-171.9-384-384-384zM328 632v192H200V632h128zm496 192H696V632h128v192z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                The 3 R's
+              </div>
+            </div>
+          </div>
+          <div
+            class="ant-card-meta"
+          >
+            <div
+              class="ant-card-meta-detail"
+            >
+              <div
+                class="ant-card-meta-title"
+              >
+                <small
+                  class="StyledCard__StyledSmall-sc-187ttp8-0 bRHLRa"
+                >
+                  Jack Johnson
+                </small>
+              </div>
+            </div>
+          </div>
+          <audio
+            loop=""
+            preload="none"
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/60/b7/b4/60b7b4a1-9c5c-0549-04a4-d0698d8378cc/mzaf_17705477840724429898.plus.aac.p.m4a"
+          />
+        </div>
+        <ul
+          class="ant-card-actions"
+        >
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="backward"
+                class="anticon anticon-backward StyledCard__Backward-sc-187ttp8-6 cjmGdo"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="backward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M485.6 249.9L198.2 498c-8.3 7.1-8.3 20.8 0 27.9l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9zm320 0L518.2 498a18.6 18.6 0 00-6.2 14c0 5.2 2.1 10.4 6.2 14l287.4 248.2c10.7 9.2 26.4.9 26.4-14V263.8c0-14.8-15.7-23.2-26.4-13.9z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="play-circle"
+                class="anticon anticon-play-circle StyledCard__Play-sc-187ttp8-2 jeDZm"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="play-circle"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="64 64 896 896"
+                  width="1em"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                  />
+                  <path
+                    d="M719.4 499.1l-296.1-215A15.9 15.9 0 00398 297v430c0 13.1 14.8 20.5 25.3 12.9l296.1-215a15.9 15.9 0 000-25.8zm-257.6 134V390.9L628.5 512 461.8 633.1z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+          <li
+            style="width: 33.333333333333336%;"
+          >
+            <span>
+              <span
+                aria-label="forward"
+                class="anticon anticon-forward StyledCard__Forward-sc-187ttp8-5 jedgzL"
+                role="img"
+                tabindex="-1"
+              >
+                <svg
+                  aria-hidden="true"
+                  data-icon="forward"
+                  fill="currentColor"
+                  focusable="false"
+                  height="1em"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                >
+                  <path
+                    d="M825.8 498L538.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L825.8 526c8.3-7.2 8.3-20.8 0-28zm-320 0L218.4 249.9c-10.7-9.2-26.4-.9-26.4 14v496.3c0 14.9 15.7 23.2 26.4 14L505.8 526c4.1-3.6 6.2-8.8 6.2-14 0-5.2-2.1-10.4-6.2-14z"
+                  />
+                </svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+`;

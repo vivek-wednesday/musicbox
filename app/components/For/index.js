@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 const FlexContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.isRow ? `row;` : `column;`)};
+  flex-direction: ${props => (props.isrow ? `row;` : `column;`)};
 `;
 
 export function For({ of, ParentComponent = props => <FlexContainer {...props} />, renderItem, noParent, ...props }) {
@@ -32,9 +32,9 @@ For.propTypes = {
   parent: Proptypes.object,
   iteratee: Proptypes.string,
   renderItem: Proptypes.func.isRequired,
-  noParent: Proptypes.bool
+  noParent: Proptypes.bool,
 };
 For.defaultProps = {
-  isRow: true
+  isrow: "true"
 };
 export default For;
