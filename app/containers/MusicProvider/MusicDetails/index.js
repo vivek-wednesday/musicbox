@@ -46,7 +46,7 @@
    dispatchGetMusicDetail(path.id)
  
    return (
-        !(detailError === null) ? 
+        (detailError === null) ? 
         <StyleDiv>
          <Card
              data-testid="music-details"
