@@ -4,7 +4,7 @@
  *
  */
 
- import React, { memo, useEffect  } from 'react';
+ import React, { memo } from 'react';
  import PropTypes from 'prop-types';
  import { connect } from 'react-redux';
  import { Card } from 'antd';
@@ -13,7 +13,7 @@
  import { compose } from 'redux';
  import { injectSaga } from 'redux-injectors';
  import styled from 'styled-components';
- import { improveImg } from '@components/StyledCard';
+ //import { improveImg } from '@components/StyledCard';
  //import If from '@components/If';
  import musicContainerSaga from '../saga';
  import { musicContainerCreators } from '../reducer';
@@ -43,17 +43,15 @@
  
  export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
    const path = useParams()
-   useEffect(() => {
-     dispatchGetMusicDetail(path.id)
-   })
+   dispatchGetMusicDetail(path.id)
  
    return (
-        !(musicResult === undefined) ? 
+        !(detailError === null) ? 
         <StyleDiv>
          <Card
              data-testid="music-details"
              style={{ width: 300 }}
-             cover={<img alt="example" src={improveImg(musicResult.artworkUrl100)} />}
+             cover={<img alt="example" src={musicResult.artworkUrl100} />}
              title={<Title>{musicResult.trackName}</Title>}
            >
              <Price data-testid="price">{intl.formatMessage({ id: 'price' }, { price: musicResult.trackPrice })}</Price>

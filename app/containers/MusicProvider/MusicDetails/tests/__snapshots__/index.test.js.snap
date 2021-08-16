@@ -33,7 +33,7 @@ exports[`<MusicDetails /> container tests should render and match the snapshot 1
         >
           <img
             alt="example"
-            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/300x300bb.jpg"
+            src="https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ae/4c/d4/ae4cd42a-80a9-d950-16f5-36f01a9e1881/source/100x100bb.jpg"
           />
         </div>
         <div
