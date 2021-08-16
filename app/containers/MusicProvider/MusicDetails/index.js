@@ -4,7 +4,7 @@
  *
  */
 
-import React, { memo, useEffect } from 'react';
+import React, { memo  } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Card } from 'antd';
@@ -43,12 +43,13 @@ const Title = styled.h3`
 export function MusicDetails({ musicResult, intl, dispatchGetMusicDetail, detailError }) {
   const path = useParams()
   
-  useEffect(() => {
+  /* useEffect(() => {
     dispatchGetMusicDetail(path.id)
-  }, [])
+  }, []) */
 
   return (
     <StyleDiv>
+        {dispatchGetMusicDetail(path.id)}
         <If condition={!detailError} otherwise={<T data-testid="no-music-data" id="not_found" />}>
           <Card
             data-testid="music-details"
