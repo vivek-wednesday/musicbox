@@ -53,18 +53,4 @@ describe('MusicContainer saga tests', () => {
       })
     );
   });
-
-  /* it('should ensure that REUQUEST_MUSIC_DETAIL is dispatched', () => {
-    const res = getDetailGenerator.next().value;
-    expect(() => expect(res).toEqual(select(selectMusicResults()))).toThrowError('serializes to the same string')
-    const musicResponse = {
-      totalCount: 1
-    };
-    expect(getMusicGenerator.next(apiResponseGenerator(true, musicResponse)).value).toEqual(
-      put({
-        type: musicContainerTypes.SUCCESS_GET_DETAIL,
-        data: musicResponse
-      })
-    );
-  }); */
 });
