@@ -13,7 +13,7 @@
  import { compose } from 'redux';
  import { injectSaga } from 'redux-injectors';
  import styled from 'styled-components';
- import { improveImg } from '@components/StyledCard';
+ import { improveImg } from '@components/StyledGrid';
  //import If from '@components/If';
  import musicContainerSaga from '../saga';
  import { musicContainerCreators } from '../reducer';

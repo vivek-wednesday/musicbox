@@ -9,6 +9,7 @@ import React from 'react';
 import {fireEvent} from "@testing-library/react"
 import { renderWithIntl, timeout } from '@utils/testUtils';
 import { MusicContainerTest as MusicContainer, mapDispatchToProps } from '../index';
+import { musicContainerCreators } from '../../reducer';
 
 
 describe('<MusicContainer /> tests', () => {
@@ -61,19 +62,17 @@ describe('<MusicContainer /> tests', () => {
     expect(getByTestId('no-music-data')).toBeTruthy;
   })
 
-  it("should dispatch get music from mapDispatchToProps", () => {
-    const dispatch = jest.fn();
-    const spy = jest.spyOn(mapDispatchToProps(dispatch), 'dispatchGetMusic')
-    mapDispatchToProps(dispatch).dispatchGetMusic();
-    expect(spy).toHaveBeenCalled
-  })
-
-  it("should dispatch clear music from mapDispatchToProps", () => {
-    const dispatch = jest.fn();
-    const spy = jest.spyOn(mapDispatchToProps(dispatch), 'dispatchClearGetMusic')
-    mapDispatchToProps(dispatch).dispatchClearGetMusic();
-    expect(spy).toHaveBeenCalled
-  })
+  it('receives correct dispatch functions from store as props', () => {
+    let mocks = {}
+    mocks.dispatch = () => {};
+    jest.spyOn(mocks, 'dispatch');
+    const dispatchedFunctions = mapDispatchToProps(mocks.dispatch);
+    dispatchedFunctions.dispatchGetMusic('new');
+    expect(mocks.dispatch.mock.calls[0][0]).toStrictEqual(musicContainerCreators.requestGetMusic('new'));
+    dispatchedFunctions.dispatchClearGetMusic(); 
+    expect(mocks.dispatch.mock.calls[1][0]).toStrictEqual(musicContainerCreators.clearGetMusic());
+  });
+  
 })
 
 

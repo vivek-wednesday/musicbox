@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { renderWithIntl } from '@utils/testUtils';
-import {data} from "@components/StyledCard/tests/testData"
+import {data} from "@app/components/StyledGrid/tests/testData"
 import { MusicDetailsTest as MusicDetails, mapDispatchToProps } from '../index';
 
 describe('<MusicDetails /> container tests', () => {

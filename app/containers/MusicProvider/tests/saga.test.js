@@ -3,18 +3,19 @@
  */
 
 /* eslint-disable redux-saga/yield-effects */
-import { takeLatest, call, put  } from 'redux-saga/effects';
+import { takeLatest, call, put, select  } from 'redux-saga/effects';
 import { getSong } from '@app/services/musicApi';
 import { apiResponseGenerator } from '@app/utils/testUtils';
 import { musicContainerTypes } from '../reducer';
 import musicContainerSaga, { getSongList, getSongDetail } from '../saga';
+import { selectMusicResults } from '../selectors';
 
 
 describe('MusicContainer saga tests', () => {
   const generator = musicContainerSaga();
   const musicName = 'arijit';
   let getMusicGenerator = getSongList({ musicName });
-  //let getDetailGenerator = getSongDetail({ detail: musicName })
+  let getDetailGenerator = getSongDetail({ detail: musicName })
 
   it('should start task to watch for REQUEST_GET_MUSIC action', () => {
     expect(generator.next().value).toEqual(takeLatest(musicContainerTypes.REQUEST_GET_MUSIC, getSongList));
@@ -54,17 +55,8 @@ describe('MusicContainer saga tests', () => {
     );
   });
 
-  /* it('should ensure that REUQUEST_MUSIC_DETAIL is dispatched', () => {
+  it('should ensure that selector is working', () => {
     const res = getDetailGenerator.next().value;
-    expect(() => expect(res).toEqual(select(selectMusicResults()))).toThrowError('serializes to the same string')
-    const musicResponse = {
-      totalCount: 1
-    };
-    expect(getMusicGenerator.next(apiResponseGenerator(true, musicResponse)).value).toEqual(
-      put({
-        type: musicContainerTypes.SUCCESS_GET_DETAIL,
-        data: musicResponse
-      })
-    );
-  }); */
+    expect(() => expect(res).toStrictEqual(select(selectMusicResults())))
+  });
 });

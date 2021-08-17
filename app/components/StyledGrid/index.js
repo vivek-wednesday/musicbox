@@ -1,6 +1,6 @@
 /**
  *
- * StyledCard
+ * StyledGrid
  *
  */
 import React, { useEffect, useRef, useState } from 'react';
@@ -62,7 +62,7 @@ const Backward = styled(BackwardOutlined)`
   ${styles.secondaryIcon}
 `;
 
-function StyledCard(props) {
+function StyledGrid(props) {
   const { musicData } = props;
   const { Meta } = Card;
 
@@ -189,8 +189,8 @@ function StyledCard(props) {
 
 //Details
 
-StyledCard.propTypes = {
+StyledGrid.propTypes = {
   musicData: PropTypes.object
 };
 
-export default StyledCard;
+export default StyledGrid;

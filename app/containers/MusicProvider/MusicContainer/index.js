@@ -16,7 +16,7 @@ import styled from 'styled-components';
 import { debounce, isEmpty } from 'lodash';
 import If from '@components/If';
 import { T } from '@components/T';
-import StyledCard from '@components/StyledCard';
+import StyledGrid from '@components/StyledGrid';
 import { musicContainerCreators } from '../reducer';
 import musicContainerSaga from '../saga';
 import {
@@ -73,7 +73,7 @@ export function MusicContainer({
       />
       <If condition={!isEmpty(musicData)} otherwise={<T data-testid="no-music-data" id="no_results" />}>
         <Row data-testid="grid" gutter={[40, 24]} justify="center">
-          <StyledCard musicData={musicData} />
+          <StyledGrid musicData={musicData} />
         </Row>
       </If>
     </Container>
