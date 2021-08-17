@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MusicDetails /> container tests should render and match the snapshot 1`] = `
+<body>
+  <div>
+    <p
+      class="T__StyledText-gjlic1-0 kYcyRq"
+      data-testid="no-music-data"
+    >
+      We don't have this on our database.
+    </p>
+  </div>
+</body>
+`;

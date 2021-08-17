@@ -4,11 +4,11 @@ exports[`<MusicContainer /> tests should render and match the snapshot 1`] = `
 <body>
   <div>
     <div
-      class="MusicContainer__Container-sc-1d1diwg-0 bgiqPk"
+      class="MusicContainer__Container-pp71iv-0 fNwnIl"
       data-testid="music-container"
     >
       <span
-        class="ant-input-group-wrapper ant-input-group-wrapper-lg ant-input-search ant-input-search-large ant-input-search-with-button MusicContainer__StyledSearch-sc-1d1diwg-1 cTVYrP"
+        class="ant-input-group-wrapper ant-input-group-wrapper-lg ant-input-search ant-input-search-large ant-input-search-with-button MusicContainer__StyledSearch-pp71iv-1 kelAnC"
       >
         <span
           class="ant-input-wrapper ant-input-group"

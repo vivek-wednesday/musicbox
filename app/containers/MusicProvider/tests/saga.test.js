@@ -3,20 +3,25 @@
  */
 
 /* eslint-disable redux-saga/yield-effects */
-import { takeLatest, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put  } from 'redux-saga/effects';
 import { getSong } from '@app/services/musicApi';
 import { apiResponseGenerator } from '@app/utils/testUtils';
 import { musicContainerTypes } from '../reducer';
-import musicContainerSaga, { getSongList } from '../saga';
+import musicContainerSaga, { getSongList, getSongDetail } from '../saga';
 
 
 describe('MusicContainer saga tests', () => {
   const generator = musicContainerSaga();
   const musicName = 'arijit';
   let getMusicGenerator = getSongList({ musicName });
+  //let getDetailGenerator = getSongDetail({ detail: musicName })
 
   it('should start task to watch for REQUEST_GET_MUSIC action', () => {
     expect(generator.next().value).toEqual(takeLatest(musicContainerTypes.REQUEST_GET_MUSIC, getSongList));
+  });
+
+  it('should start task to watch for REQUEST_MUSIC_DETAIL action', () => {
+    expect(generator.next().value).toEqual(takeLatest(musicContainerTypes.REQUEST_MUSIC_DETAIL, getSongDetail));
   });
 
   it('should ensure that the action FAILURE_GET_MUSIC is dispatched when the api call fails', () => {

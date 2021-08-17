@@ -1,12 +1,11 @@
 import get from 'lodash/get';
 import { createSelector } from 'reselect'
 import { initialState } from './reducer'
+
 /**
  * Direct selector to the musicContainer state domain
  */
-
 const selectMusicContainerDomain = state => state.musicContainer || initialState
-
 
 export const selectMusicContainer = () =>
   createSelector(
@@ -20,10 +19,34 @@ export const selectMusicData = () =>
     substate => get(substate, 'musicData')
   );
 
-export const selectMusicError = () =>
+export const selectMusicResults = () => 
+  createSelector(
+    selectMusicContainerDomain,
+    substate => get(get(substate, 'musicData'), 'results')
+  )
+
+  export const selectMusicError = () =>
   createSelector(
     selectMusicContainerDomain,
     substate => get(substate, 'musicError')
+  );
+
+  export const selectNewData = () =>
+  createSelector(
+    selectMusicContainerDomain,
+    substate => get(substate, 'newData')
+  );
+
+  export const selectDetailError = () =>
+  createSelector(
+    selectMusicContainerDomain,
+    substate => get(substate, 'detailError')
+  );
+
+  export const selectMusicDetail = () =>
+  createSelector(
+    selectMusicContainerDomain,
+    substate => get(substate, 'musicDetail')
   );
 
 export const selectMusicName = () =>
