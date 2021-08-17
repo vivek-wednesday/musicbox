@@ -1,6 +1,6 @@
 /**
  *
- * StyledCard
+ * StyledGrid
  *
  */
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,16 +12,18 @@ import {
   CustomerServiceOutlined,
   PauseCircleOutlined
 } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { isEmpty } from 'lodash';
 import styled from 'styled-components';
 import { styles } from '@themes';
 import { T } from '@components/T';
 import If from '@components/If';
+import routeConstants from '@utils/routeConstants';
 import { BACKWARD, FORWARD, PAUSE, PLAY } from '@utils/constants';
 
 // Function to improve image resolution as well as deal with undefined data.
-function improveImg(str) {
+export function improveImg(str) {
   const escapedFind = '100x100'.replace(/([.*+?^=!:${}()|\]\\])/g, '\\$1');
   return str.replace(new RegExp(escapedFind, 'g'), '300x300');
 }
@@ -60,7 +62,7 @@ const Backward = styled(BackwardOutlined)`
   ${styles.secondaryIcon}
 `;
 
-function StyledCard(props) {
+function StyledGrid(props) {
   const { musicData } = props;
   const { Meta } = Card;
 
@@ -84,16 +86,16 @@ function StyledCard(props) {
 
   function controlAudio(val, type) {
     const ele = audioList.current[val];
-    if (type === 'backward') {
+    if (type === BACKWARD) {
       ele.currentTime -= 5;
-    } else if (type === 'forward') {
+    } else if (type === FORWARD) {
       ele.currentTime += 5;
-    } else if (type === 'play') {
+    } else if (type === PLAY) {
       ele.play();
       setIsPlaying(true);
       setCurrentSong(val);
       showProgress(ele);
-    } else if (type === 'pause') {
+    } else if (type === PAUSE) {
       ele.pause();
       setIsPlaying(false);
       clearInterval(itrvl);
@@ -104,6 +106,11 @@ function StyledCard(props) {
     if (currentSong === id) {
       return <Progress percent={progress} showInfo={false} />;
     }
+  }
+
+  function resolveLink(trackId) {
+    const path = routeConstants.details.route;
+    return path.replace(':id', trackId);
   }
 
   return (
@@ -120,34 +127,38 @@ function StyledCard(props) {
               cover={<ImgStyle alt="example" src={improveImg(data.artworkUrl100)} />}
               actions={[
                 <Backward
-                  key="backward"
+                  key={BACKWARD}
+                  data-testid="backward"
                   onClick={() => {
                     controlAudio(index, BACKWARD);
                   }}
                 />,
-                  <If
-                    key={index}
-                    condition={isPlaying}
-                    otherwise={
-                      <Play
-                        key="play"
-                        onClick={() => {
-                          controlAudio(index, PLAY);
-                        }}
-                      />
-                    }
-                  >
-                    <If condition={currentSong === index} otherwise={<DisabledPlay key="disabled-play" />}>
-                      <Pause
-                        key="play"
-                        onClick={() => {
-                          controlAudio(index, PAUSE);
-                        }}
-                      />
-                    </If>
-                  </If>,
+                <If
+                  key={index}
+                  condition={isPlaying}
+                  otherwise={
+                    <Play
+                      key={PLAY}
+                      data-testid="play"
+                      onClick={() => {
+                        controlAudio(index, PLAY);
+                      }}
+                    />
+                  }
+                >
+                  <If condition={currentSong === index} otherwise={<DisabledPlay key={PLAY} data-testid="disabled" />}>
+                    <Pause
+                      key={PAUSE}
+                      data-testid="pause"
+                      onClick={() => {
+                        controlAudio(index, PAUSE);
+                      }}
+                    />
+                  </If>
+                </If>,
                 <Forward
-                  key="forward"
+                  key={FORWARD}
+                  data-testid="forward"
                   onClick={() => {
                     controlAudio(index, FORWARD);
                   }}
@@ -158,7 +169,15 @@ function StyledCard(props) {
                 avatar={<CustomerServiceOutlined style={{ fontSize: 20 }} spin={currentSong === index} />}
                 title={data.trackCensoredName}
               />
-              <Meta title={<StyledSmall>{data.artistName}</StyledSmall>} description={showProgressBar(index)} />
+
+              <Meta
+                title={
+                  <Link exact="true" to={resolveLink(item.trackId)}>
+                    <StyledSmall>{data.artistName}</StyledSmall>
+                  </Link>
+                }
+                description={showProgressBar(index)}
+              />
               <audio ref={ele => (audioList.current[index] = ele)} src={data.previewUrl} preload="none" loop />
             </Card>
           </Col>
@@ -168,8 +187,10 @@ function StyledCard(props) {
   );
 }
 
-StyledCard.propTypes = {
+//Details
+
+StyledGrid.propTypes = {
   musicData: PropTypes.object
 };
 
-export default StyledCard;
+export default StyledGrid;

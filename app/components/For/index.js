@@ -35,6 +35,6 @@ For.propTypes = {
   noParent: Proptypes.bool,
 };
 For.defaultProps = {
-  isrow: "true"
+  isrow: true
 };
 export default For;

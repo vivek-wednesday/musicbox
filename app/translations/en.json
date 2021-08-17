@@ -13,5 +13,11 @@
   "wednesday_solutions": "Wednesday Solutions",
   "itunes_scraper": "iTunes Scraper",
   "search_placeholder": "Search your favorite song",
-  "no_results": "Oops! There's nothing here."
+  "no_results": "Oops! There's nothing here.",
+  "unrated": "Unrated",
+  "price": "Price: ${price}",
+  "artist": "Artist Name: {name}",
+  "genre": "Genre: {genre}",
+  "rating": "Rating: {rating}",
+  "not_found": "We don't have this on our database."
 }
